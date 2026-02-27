@@ -1,5 +1,4 @@
 const arrayViaggi = [
-
     {
         tripName: "Trip to Rome",
         destination: "Rome",
