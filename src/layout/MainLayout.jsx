@@ -4,7 +4,7 @@ function MainLayout() {
   return (
     <>
       <header>
-        <h1>Header Layout</h1>
+        <h1>Header Layout </h1>
       </header>
       <main>
         <Outlet />
