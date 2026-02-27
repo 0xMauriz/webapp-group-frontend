@@ -3,9 +3,9 @@ import { Outlet } from "react-router-dom";
 function MainLayout() {
   return (
     <>
-      <header>
-        <h1>Header Layout</h1>
-      </header>
+     <nav className="navbar bg-body-tertiary mb-4 d-flex justify-content-center">
+      <h1>Documentello di Viaggello</h1>
+     </nav>
       <main>
         <Outlet />
       </main>
