@@ -5,20 +5,21 @@ function MainLayout() {
   return (
     <>
      <nav className="navbar bg-success-subtle mb-4">
-      <div className="container d-flex">
-        <h1>Viaggello</h1>
+      <div className="container">
+       <Link to="/" className="text-decoration-none text-success">
+      <h1 className="h3 m-0 fw-bold">Viaggello</h1>
+    </Link>
        <img 
             src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png" 
             alt="Profilo" 
             className="rounded-circle border border-white shadow-sm"
             style={{ width: "45px", height: "45px", objectFit: "cover" }} 
           />
-       
       </div>
 
      </nav>
       <main>
-        
+      
         <Outlet />
       </main>
     
