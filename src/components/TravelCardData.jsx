@@ -1,25 +1,22 @@
 import { useState } from "react"
-import tripData from "../data/tripData.js"
-import TravelerCard from "./TravelerCard.jsx"
+import tripData from "../../public/data/tripData.js"
+import TravelCard from "./TravelCard.jsx"
 
 function TravelCardData() {
 
-    const [trips, setTrips] = useState([]);
-
-    setTrips(tripData);
+    const [trips, setTrips] = useState(tripData);
 
     return (
 
         <>
             {trips.map(trip => (
-                <TravelerCard
+                <TravelCard
                     key={trip.id}
                     tripName={trip.tripName}
                     destination={trip.destination}
                     tripDuration={trip.tripDuration}
                     tripStart={trip.tripStart}
-                    tripEnd={trip.tripStart}
-                    travelersData={trip.travelersData}
+                    tripEnd={trip.tripEnd}
                 />))}
 
         </>
