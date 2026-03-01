@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+//importo bootstrap
 //import layout
 import MainLayout from "./layout/MainLayout";
 
