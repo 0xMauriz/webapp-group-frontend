@@ -6,7 +6,7 @@ const arrayViaggi = [
         tripDuration: "1h 30min",
         tripStart: "11:30",
         tripEnd: "13:00",
-        travelerData: [
+        travelersData: [
             {
                 id: 1,
                 trip_id: 1,
