@@ -10,9 +10,8 @@ function TravelCardData() {
     <div className="row">
       <div className="col">
         {trips.map((trip) => (
-          <Link to={`/travel/${trip.id}`}>
+          <Link key={trip.id} to={`/travel/${trip.id}`}>
             <TravelCard
-              key={trip.id}
               tripName={trip.tripName}
               destination={trip.destination}
               tripDuration={trip.tripDuration}
