@@ -1,14 +1,8 @@
 function TravelCard(props) {
-  const { tripName, destination, tripDuration, tripStart, tripEnd } = props;
+  const { tripName, destination, tripDuration, tripStart, tripEnd, image } = props;
   return (
     <div>
       <div className="card" style={{ width: "18rem" }}>
-        <img
-          src="https://via.placeholder.com/286x180"
-          className="card-img-top"
-          alt="Immagine esempio"
-        />
-
         <div className="card-body">
           <h5 className="card-title">{tripName}</h5>
           <p className="card-text">

@@ -26,3 +26,7 @@ li {
   color: skyblue;
   cursor: pointer;
 }
+
+a {
+  text-decoration: none;
+}
