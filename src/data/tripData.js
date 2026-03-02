@@ -2,6 +2,7 @@ const arrayViaggi = [
     {
         id: 1,
         tripName: "DolceVita",
+        tutor: "Donato",
         destination: "Rome",
         tripDuration: "5 days",
         tripStart: "15mar2026",
@@ -77,6 +78,7 @@ const arrayViaggi = [
     {
         id: 2,
         tripName: "Weekend by the Lake",
+        tutor: "Simone",
         destination: "Zurich",
         tripDuration: "3 days",
         tripStart: "06mar2026",
@@ -126,6 +128,7 @@ const arrayViaggi = [
     {
         id: 3,
         tripName: "Paris Easter Egg",
+        tutor: "Paolo",
         destination: "Paris",
         tripDuration: "7 days",
         tripStart: "01apr2026",
