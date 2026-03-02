@@ -2,11 +2,13 @@ function TravelCard(props) {
   const { image, tripName, destination, tripDuration, tripStart, tripEnd } = props;
 
   return (
-    <div>
-      <div className="card" style={{ width: "18rem" }}>
+    <div className="row">
+      <div className="col">
+
+      <div className="card">
         <img
           src={`/public/imgs/` + image}
-          className="card-img-top"
+          className="card-img-top card-img-trip"
           alt="Immagine esempio"
         />
 
@@ -30,6 +32,7 @@ function TravelCard(props) {
         </ul>
       </div>
     </div>
+      </div>
   );
 }
 

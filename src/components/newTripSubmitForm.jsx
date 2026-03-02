@@ -34,7 +34,7 @@ function NewTripSubmitForm({ onSubmit }) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="p-5">
             <h2>Nuovo Viaggio</h2>
 
             <input
@@ -43,6 +43,7 @@ function NewTripSubmitForm({ onSubmit }) {
                 placeholder="Nome viaggio"
                 value={formData.tripName}
                 onChange={handleChange}
+                className=""
             />
 
             <input

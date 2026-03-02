@@ -9,18 +9,21 @@ function TravelCardData() {
   return (
     <div className="row">
       <div className="col">
-        {trips.map((trip) => (
-          <Link key={trip.id} to={`/travel/${trip.id}`}>
-            <TravelCard
-              tripName={trip.tripName}
-              destination={trip.destination}
-              tripDuration={trip.tripDuration}
-              tripStart={trip.tripStart}
-              tripEnd={trip.tripEnd}
-              image ={trip.image}
-            />
-          </Link>
-        ))}
+        <div className="container d-flex justify-content-center gap-5 ">
+          {trips.map((trip) => (
+            <Link key={trip.id} to={`/travel/${trip.id}`}>
+              <TravelCard
+
+                tripName={trip.tripName}
+                destination={trip.destination}
+                tripDuration={trip.tripDuration}
+                tripStart={trip.tripStart}
+                tripEnd={trip.tripEnd}
+                image={trip.image}
+              />
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );
