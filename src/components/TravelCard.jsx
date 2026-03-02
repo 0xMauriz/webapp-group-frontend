@@ -3,7 +3,7 @@ function TravelCard(props) {
     props;
 
   return (
-    <div className="card">
+    <div className="card p-3">
       <img
         src={`/imgs/${image}`}
         className="card-img-top card-img-trip"
@@ -11,22 +11,22 @@ function TravelCard(props) {
       />
 
       <div className="card-body">
-        <h5 className="card-title">{tripName}</h5>
+        <h5 className="fw-bold">{tripName}</h5>
         <p className="card-text">
-          <strong>destination:</strong>
+          <strong>Destination: </strong>
           {destination}
         </p>
       </div>
 
-      <ul className="list-group list-group-flush">
-        <p className="card-text">
-          <strong>duration:</strong>
+      <ul>
+        <li className="card-text">
+          <strong>Duration: </strong>
           {tripDuration}
-        </p>
-        <p className="card-text">
-          <strong>Dates:</strong>
+        </li>
+        <li className="card-text">
+          <strong>Dates: </strong>
           {tripStart} - {tripEnd}
-        </p>
+        </li>
       </ul>
     </div>
   );
