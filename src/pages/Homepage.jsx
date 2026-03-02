@@ -15,16 +15,22 @@ function Homepage() {
         />
 
         <div className="card-body">
-          <h5 className="card-title">Titolo Card</h5>
+          <h5 className="card-title">{trip.tripName}</h5>
           <p className="card-text">
-            Un breve testo di esempio per riempire il contenuto della card.
+            <strong>destination:</strong>{trip.destination}
           </p>
         </div>
 
         <ul className="list-group list-group-flush">
-          <li className="list-group-item">Primo elemento</li>
-          <li className="list-group-item">Secondo elemento</li>
-          <li className="list-group-item">Terzo elemento</li>
+          <p className="card-text">
+            <strong>tutor:</strong>{trip.tutor}
+          </p>
+          <p className="card-text">
+            <strong>duration:</strong>{trip.duration}
+          </p>
+          <p className="card-text">
+            <strong>Dates:</strong>{trip.start} - {trip.tripEnd}
+          </p>
         </ul>
 
         <div className="card-body">
