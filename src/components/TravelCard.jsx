@@ -12,6 +12,7 @@ function TravelCard(props) {
         {tripDuration}
         {tripStart}
         {tripEnd}
+        {travelersData}
       </p>
     </div>
   );
