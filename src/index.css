@@ -14,3 +14,13 @@
 .hidden {
   overflow: hidden;
 }
+
+li {
+  list-style-type: none;
+}
+
+.active-hover:hover {
+  text-decoration-line: underline;
+  color: skyblue;
+  cursor: pointer;
+}
