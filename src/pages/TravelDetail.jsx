@@ -44,13 +44,13 @@ function TravelDetail() {
           <Link to={"/"}>
             <button
               type="button"
-              className="btn btn-outline-primary fs-5 position-absolute end-0"
+              className="btn btn-outline-success fs-5 position-absolute end-0 "
             >
               Lista Viaggi
             </button>
           </Link>
           <h1>Viaggiatori:</h1>
-          <SearchBar search={searchTraveler} setSearch={setSearchTraveler} />
+          <SearchBar search={searchTraveler} setSearch={setSearchTraveler}  className/>
           <ul className="list-group list-group-flush">
             {searched_travelers.map((traveler) => (
               <TravelerCards key={traveler.id} traveler={traveler} />

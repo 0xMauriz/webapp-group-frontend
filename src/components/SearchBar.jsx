@@ -5,15 +5,15 @@ const SearchBar = ({ search, setSearch }) => {
     setSearch("");
   }
   return (
-    <form id="search-bar" onSubmit={clearForm} className="my-3">
-      <input
+    <form id="search-bar" onSubmit={clearForm} className="my-3 ">
+      <input className="border-success rounded"
         id="search-travel"
         type="text"
         placeholder="Cerca viaggiatore"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <button>All</button>
+      <button className="rounded bg-transparent border-success text-success">All</button>
     </form>
   );
 };
