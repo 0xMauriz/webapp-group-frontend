@@ -1,7 +1,8 @@
 import { useParams, Link } from "react-router-dom";
-
-//importo componente viaggiatore
+import { useState } from "react";
+//importo componenti
 import TravelerCard from "../components/TravelerCard";
+import SearchBar from "../components/SearchBar";
 
 //importo dati
 import arrayViaggi from "./../data/tripData";
@@ -14,15 +15,24 @@ function TravelDetail() {
   const travel = arrayViaggi.find((travel) => travel.id == travel_id);
   const travelers = travel.travelerData;
 
-  console.log(travelers);
+  const [searchTraveler, setSearchTraveler] = useState("");
+
+  //filtro array filter_travelers per vedere se ritornare solo i traveler ricercati
+  const searched_travelers = travelers.filter(
+    (traveler) =>
+      traveler.firstName.toLowerCase().includes(searchTraveler.toLowerCase()) ||
+      traveler.lastName.toLowerCase().includes(searchTraveler.toLowerCase()),
+  );
 
   return (
     <div className="container">
       <div className="row">
         <div className="col border-bottom border-3 border-info">
-          <h1>Viaggio</h1>
-          <h2>Accompagntore</h2>
-          <p>Data_inizio - Data_fine</p>
+          <h1>{travel.tripName}</h1>
+          <h2>{travel.tutor}</h2>
+          <p>
+            {travel.tripStart} - {travel.tripEnd}
+          </p>
         </div>
       </div>
 
@@ -37,8 +47,9 @@ function TravelDetail() {
             </button>
           </Link>
           <h1>Viaggiatori:</h1>
+          <SearchBar search={searchTraveler} setSearch={setSearchTraveler} />
           <ul className="list-group list-group-flush">
-            {travelers.map((traveler) => (
+            {searched_travelers.map((traveler) => (
               <TravelerCard key={traveler.id} traveler={traveler} />
             ))}
           </ul>
