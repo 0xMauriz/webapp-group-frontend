@@ -4,7 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import TravelerCard from "../components/TravelerCard";
 
 //importo dati
-// import travelers from "../assets/data/travelerData";
+import travelers from "../data/tripData";
 
 const travelers = [
   {
