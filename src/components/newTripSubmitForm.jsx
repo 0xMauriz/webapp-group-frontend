@@ -1,8 +1,10 @@
 import { useState } from "react";
 
 function NewTripSubmitForm({ onSubmit }) {
+
     // STATE del form
-  // Qui salviamo i valori inseriti negli input
+    // Qui salviamo i valori inseriti negli input
+
     const [formData, setFormData] = useState({
         id: "",
         tripName: "",
@@ -12,6 +14,7 @@ function NewTripSubmitForm({ onSubmit }) {
         tripStart: "",
         tripEnd: ""
     });
+
     // FUNZIONE che aggiorna lo stato quando scrivo negli input
     function handleChange(e) {
         const { name, value } = e.target;
@@ -24,10 +27,10 @@ function NewTripSubmitForm({ onSubmit }) {
     // FUNZIONE che parte quando invio il form
     function handleSubmit(e) {
         e.preventDefault(); // evita il refresh della pagina
-        console.log(formData); 
+        console.log(formData);
         onSubmit(formData);
-        
-        
+
+
     }
 
     return (
@@ -69,7 +72,7 @@ function NewTripSubmitForm({ onSubmit }) {
     );
 
 
-    
+
 }
 
 export default NewTripSubmitForm;
