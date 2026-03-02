@@ -1,12 +1,17 @@
-function TravelCard() {
+function TravelCard(props) {
+
+  const { id, tripName, destination, tripDuration, tripStart, tripEnd, travelersData } = props;
+
+
   return (
     <div>
       <h1>nome cognome</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat optio
-        ipsam, dolor quia, excepturi necessitatibus corrupti dicta doloribus
-        itaque pariatur minima, veniam animi recusandae rerum esse hic! Error,
-        sit. Inventore!
+        {tripName}
+        {destination}
+        {tripDuration}
+        {tripStart}
+        {tripEnd}
       </p>
     </div>
   );
