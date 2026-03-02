@@ -4,8 +4,16 @@ import { MdEmail } from "react-icons/md";
 function TravelerCard(props) {
   const { traveler } = props;
   //destrutturo oggetto traveler
-  const { id, firstName, lastName, taxCode, email, phone, emergencyContact } =
-    traveler;
+  const {
+    id,
+    firstName,
+    lastName,
+    taxCode,
+    email,
+    phone,
+    emergencyContact,
+    image,
+  } = traveler;
   return (
     <>
       <li
@@ -35,7 +43,7 @@ function TravelerCard(props) {
                   <div className="row g-0">
                     <div className="col-md-5">
                       <img
-                        src={`/img_travelers/${taxCode}.png`}
+                        src={`/imgs/${image}`}
                         className="img-fluid rounded-start img_travel_card"
                         alt="immagine viaggiatore"
                       />
@@ -74,9 +82,7 @@ function TravelerCard(props) {
                               .querySelector("body")
                               .classList.remove("hidden");
                           }}
-                        >
-                          
-                        </button>
+                        ></button>
                       </div>
                     </div>
                   </div>
