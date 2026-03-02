@@ -1,10 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
-// //importo componenti
-// import NewTravelerFrom from "../components/newTravelerForm"
+
 import TravelerCards from "../components/TravelerCards";
 import SearchBar from "../components/SearchBar";
-import NewTripSubmitForm from "../components/newTripSubmitForm";
 
 //importo dati
 import arrayViaggi from "./../data/tripData";
@@ -60,7 +58,6 @@ function TravelDetail() {
           </ul>
         </div>
       </div>
-      <NewTripSubmitForm />
     </div>
   );
 }
