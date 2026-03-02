@@ -10,7 +10,6 @@ import arrayViaggi from "./../data/tripData";
 function TravelDetail() {
   //recuper id del viaggio da url
   const { travel_id } = useParams();
-  console.log(travel_id);
 
   const travel = arrayViaggi.find((travel) => travel.id == travel_id);
   const travelers = travel.travelerData;
