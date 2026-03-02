@@ -31,7 +31,7 @@ function TravelerCard(props) {
             <div className="row">
               <div className="col">
                 {" "}
-                <div className="card mb-3 card-traveler bg-success">
+                <div className="card mb-3 card-traveler bg-success w-100">
                   <div className="row g-0">
                     <div className="col-md-5">
                       <img
@@ -61,7 +61,8 @@ function TravelerCard(props) {
 
                         <button
                           type="button"
-                          className="btn btn-success my-3"
+                          className="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+                          aria-label="Close"
                           onClick={() => {
                             document
                               .getElementById(`container-traveler-${id}`)
@@ -74,7 +75,7 @@ function TravelerCard(props) {
                               .classList.remove("hidden");
                           }}
                         >
-                          close
+                          
                         </button>
                       </div>
                     </div>
