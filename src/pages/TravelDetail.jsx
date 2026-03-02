@@ -3,6 +3,7 @@ import { useState } from "react";
 //importo componenti
 import TravelerCards from "../components/TravelerCards";
 import SearchBar from "../components/SearchBar";
+import NewTripSubmitForm from "../components/newTripSubmitForm";
 
 //importo dati
 import arrayViaggi from "./../data/tripData";
@@ -54,6 +55,7 @@ function TravelDetail() {
           </ul>
         </div>
       </div>
+      <div> <NewTripSubmitForm /> </div>
     </div>
   );
 }
