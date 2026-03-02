@@ -1,4 +1,4 @@
-import tripData from "../data/tripData"
+const tripData = require('../data/tripData')
 
 
 function Homepage() {
