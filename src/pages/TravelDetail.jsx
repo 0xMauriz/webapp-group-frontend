@@ -1,15 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
-<<<<<<< HEAD
-//importo componenti
-//import NewTravelerForm from "../components/newTravelerForm"
-=======
-// //importo componenti
-// import NewTravelerFrom from "../components/newTravelerForm"
->>>>>>> ea514139fe5efab4deed19809977d2a7a0f3b151
+
 import TravelerCards from "../components/TravelerCards";
 import SearchBar from "../components/SearchBar";
-
 
 //importo dati
 import arrayViaggi from "./../data/tripData";
