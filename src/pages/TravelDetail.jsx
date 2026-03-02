@@ -57,8 +57,6 @@ function TravelDetail() {
         </div>
       </div>
       <NewTripSubmitForm />
-
-      <NewTravelerFrom />
     </div>
   );
 }
