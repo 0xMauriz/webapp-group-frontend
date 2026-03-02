@@ -1,3 +1,7 @@
+//importo icone
+import { MdEmail } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+
 function TravelerCard(props) {
   const { traveler } = props;
   //destrutturo oggetto traveler
@@ -43,12 +47,20 @@ function TravelerCard(props) {
                           {firstName} {lastName}
                         </h5>
                         <ul className="card-text">
-                          <li>Phone: {phone}</li>
-                          <li>Email: {email}</li>
+                          <li>
+                            <FaPhoneAlt />{" "}
+                            <span className="active-hover">{phone}</span>
+                          </li>
+                          <li>
+                            <MdEmail />{" "}
+                            <span className="active-hover">{email}</span>
+                          </li>
                           <li>C.F. {taxCode}</li>
                         </ul>
 
                         <button
+                          type="button"
+                          className="btn btn-primary my-3"
                           onClick={() => {
                             document
                               .getElementById(`container-traveler-${id}`)
@@ -75,8 +87,16 @@ function TravelerCard(props) {
                 <div className="alert alert-warning" role="alert">
                   <h5>Emergency Contact</h5>
                   <ul>
-                    <li>{emergencyContact.name}</li>
-                    <li>{emergencyContact.phone}</li>
+                    <li>
+                      <span className="fw-semibold">
+                        {emergencyContact.name}
+                      </span>
+                    </li>
+                    <li>
+                      <span className="active-hover">
+                        {emergencyContact.phone}
+                      </span>
+                    </li>
                   </ul>
                 </div>
               </div>
