@@ -7,13 +7,12 @@ function TravelCardData() {
   const [trips, setTrips] = useState(arrayViaggi);
 
   return (
-    <div className="row">
-      <div className="col">
-        <div className="container d-flex justify-content-center gap-5 ">
-          {trips.map((trip) => (
+    <div className="container text-center ">
+      <div className="row justify-content-center gap-5">
+        {trips.map((trip) => (
+          <div className="col-md-4">
             <Link key={trip.id} to={`/travel/${trip.id}`}>
               <TravelCard
-
                 tripName={trip.tripName}
                 destination={trip.destination}
                 tripDuration={trip.tripDuration}
@@ -22,8 +21,8 @@ function TravelCardData() {
                 image={trip.image}
               />
             </Link>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );
