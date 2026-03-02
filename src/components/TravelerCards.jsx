@@ -31,7 +31,7 @@ function TravelerCard(props) {
             <div className="row">
               <div className="col">
                 {" "}
-                <div className="card mb-3 card-traveler bg-black">
+                <div className="card mb-3 card-traveler bg-success">
                   <div className="row g-0">
                     <div className="col-md-5">
                       <img
@@ -61,7 +61,7 @@ function TravelerCard(props) {
 
                         <button
                           type="button"
-                          className="btn btn-primary my-3"
+                          className="btn btn-success my-3"
                           onClick={() => {
                             document
                               .getElementById(`container-traveler-${id}`)
