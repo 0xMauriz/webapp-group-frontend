@@ -1,12 +1,17 @@
-/* import { useState } from "react"
+import { useState } from "react"
 
 
 function newTravelerForm() {
 
-    const [travelers, setTravelers] = useState([
-        trip_id = "",
+    const [travelers, setTravelers] = useState({
+        trip_id: "",
+        firstName: "",
+        lastName: "",
+        taxCode: "",
+        email: "",
+        phone: ""
 
-    ]);
+    });
 
 
 
@@ -36,17 +41,8 @@ function newTravelerForm() {
             <button type="submit" className="btn btn-primary my-3">Submit</button>
         </form>
 
-            id: 1,
-            trip_id: 1,
-            firstName: "John",
-            lastName: "Smith",
-            taxCode: "USASMTH90A12X123Y",
-            email: "john.smith@email.com",
-            phone: "+1 202 555 0101",
-            emergencyContact:
-
         </>
     )
 }
 
-export default newTravelerForm */
+export default newTravelerForm
