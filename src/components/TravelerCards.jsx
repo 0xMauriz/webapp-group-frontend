@@ -1,7 +1,3 @@
-//importo icone
-import { MdEmail } from "react-icons/md";
-import { FaPhoneAlt } from "react-icons/fa";
-
 function TravelerCard(props) {
   const { traveler } = props;
   //destrutturo oggetto traveler

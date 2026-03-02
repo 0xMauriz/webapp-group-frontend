@@ -1,5 +1,5 @@
 import { useState } from "react"
-import tripData from "../../public/data/tripData.js"
+import tripData from "../../src/data/tripData.js"
 import TravelCard from "./TravelCard.jsx"
 
 function TravelCardData() {
