@@ -1,9 +1,13 @@
+
+const tripData= require('../data/tripData')
+
+
 function Homepage() {
   return (
     <>
-      <h1>prova homepage</h1>
-      <p>
-        <div className="card" style={{ width: "18rem" }}>
+      
+        {tripData.map((trip) => (
+        <div key={trip.id} className="card" style={{ width: "18rem" }}>
         <img
           src="https://via.placeholder.com/286x180"
           className="card-img-top"
@@ -26,10 +30,11 @@ function Homepage() {
         <div className="card-body">
           <a href="/" className="card-link">Link 1</a>
           <a href="/" className="card-link">Link 2</a>
+       
         </div>
       </div>
-      </p>
-    </>
+        ))}
+       </>
   );
 }
 
