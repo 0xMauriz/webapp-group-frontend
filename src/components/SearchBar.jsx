@@ -6,7 +6,7 @@ const SearchBar = ({ search, setSearch }) => {
   }
   return (
     <form id="search-bar" onSubmit={clearForm} className="my-3 ">
-      <input className="border-success rounded"
+      <input className="border-success rounded bg-transparent"
         id="search-travel"
         type="text"
         placeholder="Cerca viaggiatore"
