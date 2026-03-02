@@ -56,7 +56,7 @@ function TravelDetail() {
           </ul>
         </div>
       </div>
-      <div> <NewTripSubmitForm /> </div>
+      <NewTripSubmitForm />
 
       <NewTravelerFrom />
     </div>
