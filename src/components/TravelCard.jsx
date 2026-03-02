@@ -3,7 +3,7 @@ function TravelCard(props) {
     props;
 
   return (
-    <div className="card-travel p-3">
+    <div className="card p-3">
       <img
         src={`/imgs/${image}`}
         className="card-img-top card-img-trip"
