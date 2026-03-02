@@ -47,7 +47,14 @@ function NewTripSubmitForm({ onSubmit }) {
             onChange={handleChange}
             className="m-3"
           />
-
+           <input
+            type="text"
+            name="tripDestination"
+            placeholder="Destinazione"
+            value={formData.destination}
+            onChange={handleChange}
+            className="m-3"
+          />
           <input
             type="date"
             name="tripStart"
