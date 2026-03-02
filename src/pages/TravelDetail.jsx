@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
 //importo componenti
+import NewTravelerFrom from "../components/newTravelerForm"
 import TravelerCards from "../components/TravelerCards";
 import SearchBar from "../components/SearchBar";
 
@@ -54,6 +55,8 @@ function TravelDetail() {
           </ul>
         </div>
       </div>
+
+      <NewTravelerFrom />
     </div>
   );
 }
