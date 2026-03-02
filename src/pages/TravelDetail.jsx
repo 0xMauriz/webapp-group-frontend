@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
 //importo componenti
-import TravelerCard from "../components/TravelerCard";
+import TravelerCards from "../components/TravelerCards";
 import SearchBar from "../components/SearchBar";
 
 //importo dati
@@ -50,7 +50,7 @@ function TravelDetail() {
           <SearchBar search={searchTraveler} setSearch={setSearchTraveler} />
           <ul className="list-group list-group-flush">
             {searched_travelers.map((traveler) => (
-              <TravelerCard key={traveler.id} traveler={traveler} />
+              <TravelerCards key={traveler.id} traveler={traveler} />
             ))}
           </ul>
         </div>
