@@ -1,164 +1,188 @@
 const arrayViaggi = [
     {
         id: 1,
-        tripName: "Trip to Rome",
+        tripName: "DolceVita",
         destination: "Rome",
-        tripDuration: "1h 30min",
-        tripStart: "11:30",
-        tripEnd: "13:00",
+        tripDuration: "5 days",
+        tripStart: "15mar2026",
+        tripEnd: "20mar2026",
         travelersData: [
             {
                 id: 1,
                 trip_id: 1,
-                name: "Mario",
-                surname: "Rossi",
-                dateOfBirth: "1984-02-17",
-                age: "42",
-                fiscalCode: "MRRSS84B17F808K",
-                placeOfBirth: "Cinisello Balsamo",
-                nationality: "ITA"
+                firstName: "John",
+                lastName: "Smith",
+                taxCode: "USASMTH90A12X123Y",
+                email: "john.smith@email.com",
+                phone: "+1 202 555 0101",
+                emergencyContact: {
+                    name: "Mary Smith",
+                    phone: "+1 202 555 0199"
+                }
             },
             {
                 id: 2,
                 trip_id: 1,
-                name: "Frank",
-                surname: "Shire",
-                dateOfBirth: "1974-03-07",
-                age: "52",
-                fiscalCode: "FRNCBRN74B07F809Z",
-                placeOfBirth: "Birmingham",
-                nationality: "ENG"
+                firstName: "Sophie",
+                lastName: "Dubois",
+                taxCode: "FRADBS88B45Z567K",
+                email: "sophie.dubois@email.fr",
+                phone: "+33 6 12 34 56 78",
+                emergencyContact: {
+                    name: "Jean Dubois",
+                    phone: "+33 6 98 76 54 32"
+                }
             },
             {
                 id: 3,
                 trip_id: 1,
-                name: "Pablo",
-                surname: "Gutierres",
-                dateOfBirth: "1995-01-27",
-                age: "31",
-                fiscalCode: "JNGTRRS95B27F800K",
-                placeOfBirth: "Guadalajara",
-                nationality: "MEX"
+                firstName: "Carlos",
+                lastName: "García",
+                taxCode: "ESAGRC92C33L890P",
+                email: "carlos.garcia@email.es",
+                phone: "+34 612 345 678",
+                emergencyContact: {
+                    name: "Lucia García",
+                    phone: "+34 698 765 432"
+                }
             },
             {
                 id: 4,
                 trip_id: 1,
-                name: "Paolo",
-                surname: "Ferri",
-                dateOfBirth: "1993-10-11",
-                age: "31",
-                fiscalCode: "PLFRR93B11F700K",
-                placeOfBirth: "Muravera",
-                nationality: "ITA"
+                firstName: "Anna",
+                lastName: "Müller",
+                taxCode: "DEAMLR85D77Q234R",
+                email: "anna.mueller@email.de",
+                phone: "+49 151 23456789",
+                emergencyContact: {
+                    name: "Hans Müller",
+                    phone: "+49 151 98765432"
+                }
             },
             {
                 id: 5,
                 trip_id: 1,
-                name: "Eleni",
-                surname: "Papadopoulos",
-                dateOfBirth: "1986-01-02",
-                age: "40",
-                fiscalCode: "LNPPDPLS86B02F800K",
-                placeOfBirth: "Attica",
-                nationality: "GRC"
-            }
+                firstName: "Yuki",
+                lastName: "Tanaka",
+                taxCode: "JPATNK91E11W345T",
+                email: "yuki.tanaka@email.jp",
+                phone: "+81 90 1234 5678",
+                emergencyContact: {
+                    name: "Kenji Tanaka",
+                    phone: "+81 90 8765 4321"
+                }
+            },
         ]
     },
     {
         id: 2,
-        tripName: "Trip to Zurich",
+        tripName: "Weekend by the Lake",
         destination: "Zurich",
-        tripDuration: "3h 40min",
-        tripStart: "13:30",
-        tripEnd: "17:10",
+        tripDuration: "3 days",
+        tripStart: "06mar2026",
+        tripEnd: "09mar2026",
         travelerData: [
             {
                 id: 1,
                 trip_id: 2,
-                name: "Katy",
-                surname: "Smith",
-                dateOfBirth: "1980-08-09",
-                age: "46",
-                fiscalCode: "KTSMT80B09F609Z",
-                placeOfBirth: "Texas",
-                nationality: "USA"
+                firstName: "Lucas",
+                lastName: "Oliveira",
+                taxCode: "BRALVR93F22M678N",
+                email: "lucas.oliveira@email.br",
+                phone: "+55 11 91234 5678",
+                emergencyContact: {
+                    name: "Mariana Oliveira",
+                    phone: "+55 11 99876 5432"
+                }
             },
             {
                 id: 2,
                 trip_id: 2,
-                name: "Francesco",
-                surname: "Verdi",
-                dateOfBirth: "1970-06-07",
-                age: "56",
-                fiscalCode: "FRNCSCVRD70B07F609Z",
-                placeOfBirth: "Milano",
-                nationality: "ITA"
+                firstName: "Giulia",
+                lastName: "Bianchi",
+                taxCode: "BNCGLI85C41F205Z",
+                email: "giulia.bianchi@email.com",
+                phone: "3331000002",
+                emergencyContact: {
+                    name: "Luigi Rossi",
+                    phone: "3339000001"
+                }
             },
             {
                 id: 3,
                 trip_id: 2,
-                name: "Haruto",
-                surname: "Tanaka",
-                dateOfBirth: "2002-05-27",
-                age: "24",
-                fiscalCode: "RTTNK02B27F800K",
-                placeOfBirth: "Tokyo",
-                nationality: "JPN"
-            }
+                firstName: "Luca",
+                lastName: "Verdi",
+                taxCode: "VRDLCA92D15G273K",
+                email: "luca.verdi@email.com",
+                phone: "3331000003",
+                emergencyContact: {
+                    name: "Luigi Rossi",
+                    phone: "3339000001"
+                }
+            },
         ]
     },
     {
         id: 3,
-        tripName: "Trip to Paris",
+        tripName: "Paris Easter Egg",
         destination: "Paris",
-        tripDuration: "7h 00min",
-        tripStart: "9:00",
-        tripEnd: "16:00",
+        tripDuration: "7 days",
+        tripStart: "01apr2026",
+        tripEnd: "08apr2026",
         travelerData: [
             {
                 id: 1,
                 trip_id: 3,
-                name: "Anna",
-                surname: "Müller",
-                dateOfBirth: "1983-11-02",
-                age: "43",
-                fiscalCode: "NMLR83B02F609Z",
-                placeOfBirth: "Bavaria",
-                nationality: "DEU"
+                firstName: "Aisha",
+                lastName: "Khan",
+                taxCode: "UAEKHN89G66S901V",
+                email: "aisha.khan@email.ae",
+                phone: "+971 50 123 4567",
+                emergencyContact: {
+                    name: "Omar Khan",
+                    phone: "+971 50 765 4321"
+                }
             },
             {
                 id: 2,
                 trip_id: 3,
-                name: "Lukas",
-                surname: "Gruber",
-                dateOfBirth: "1997-06-22",
-                age: "39",
-                fiscalCode: "LKSGRBR97B22F609Z",
-                placeOfBirth: "Vienna",
-                nationality: "AUT"
+                firstName: "Chen",
+                lastName: "Wei",
+                taxCode: "CHNWEI90J55B654C",
+                email: "chen.wei@email.cn",
+                phone: "+86 138 0013 8000",
+                emergencyContact: {
+                    name: "Li Wei",
+                    phone: "+86 139 0013 8001"
+                }
             },
             {
                 id: 3,
                 trip_id: 3,
-                name: "Giovanni",
-                surname: "Perrito",
-                dateOfBirth: "2001-01-23",
-                age: "25",
-                fiscalCode: "GVNNPRRT01B23F810A",
-                placeOfBirth: "Ancona",
-                nationality: "ITA"
+                firstName: "Davide",
+                lastName: "Conti",
+                taxCode: "CNTDVD91L22F205A",
+                email: "davide.conti@email.com",
+                phone: "3331000005",
+                emergencyContact: {
+                    name: "Luigi Rossi",
+                    phone: "3339000001"
+                }
             },
             {
                 id: 4,
                 trip_id: 3,
-                name: "Aino",
-                surname: "Virtanen",
-                dateOfBirth: "1989-03-18",
-                age: "24",
-                fiscalCode: "NVRTNN89B18F821K",
-                placeOfBirth: "Uusimaa",
-                nationality: "FIN"
-            }
+                firstName: "Elena",
+                lastName: "Galli",
+                taxCode: "GLLELN87D45G273P",
+                email: "elena.galli@email.com",
+                phone: "3331000006",
+                emergencyContact: {
+                    name: "Luigi Rossi",
+                    phone: "3339000001"
+                }
+            },
         ]
     }
 ];
