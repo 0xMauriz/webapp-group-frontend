@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
-//importo componenti
-import NewTravelerFrom from "../components/newTravelerForm"
+// //importo componenti
+// import NewTravelerFrom from "../components/newTravelerForm"
 import TravelerCards from "../components/TravelerCards";
 import SearchBar from "../components/SearchBar";
 import NewTripSubmitForm from "../components/newTripSubmitForm";
@@ -29,8 +29,12 @@ function TravelDetail() {
     <div className="container py-5">
       <div className="row">
         <div className="col border-bottom border-3 border-success">
-          <h1 className=" text-success text-center fs-1 fw-bolder">{travel.tripName}</h1>
-          <h4 className="fst-italic text-end">Accompagnatore: {travel.tutor}</h4>
+          <h1 className=" text-success text-center fs-1 fw-bolder">
+            {travel.tripName}
+          </h1>
+          <h4 className="fst-italic text-end">
+            Accompagnatore: {travel.tutor}
+          </h4>
           <p>
             {travel.tripStart} - {travel.tripEnd}
           </p>

@@ -1,3 +1,6 @@
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
 function TravelerCard(props) {
   const { traveler } = props;
   //destrutturo oggetto traveler
@@ -44,12 +47,14 @@ function TravelerCard(props) {
                         </h5>
                         <ul className="card-text">
                           <li>
-                            {/*                             <FaPhoneAlt />{" "}
- */}                            <span className="active-hover">{phone}</span>
+                            <FaPhoneAlt />
+
+                            <span className="active-hover">{phone}</span>
                           </li>
                           <li>
-                            {/*                             <MdEmail />{" "}
- */}                            <span className="active-hover">{email}</span>
+                            <MdEmail />
+
+                            <span className="active-hover">{email}</span>
                           </li>
                           <li>C.F. {taxCode}</li>
                         </ul>
