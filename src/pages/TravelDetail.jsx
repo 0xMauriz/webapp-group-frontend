@@ -25,11 +25,11 @@ function TravelDetail() {
   );
 
   return (
-    <div className="container">
+    <div className="container py-5">
       <div className="row">
-        <div className="col border-bottom border-3 border-info">
-          <h1>{travel.tripName}</h1>
-          <h2>{travel.tutor}</h2>
+        <div className="col border-bottom border-3 border-success">
+          <h1 className=" text-success text-center fs-1 fw-bolder">{travel.tripName}</h1>
+          <h4 className="fst-italic text-end">Accompagnatore: {travel.tutor}</h4>
           <p>
             {travel.tripStart} - {travel.tripEnd}
           </p>
