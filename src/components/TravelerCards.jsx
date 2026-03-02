@@ -1,4 +1,5 @@
-function TravelerCard({ traveler }) {
+function TravelerCard(props) {
+  const { traveler } = props;
   //destrutturo oggetto traveler
   const { id, firstName, lastName, taxCode, email, phone, emergencyContact } =
     traveler;
@@ -31,7 +32,7 @@ function TravelerCard({ traveler }) {
                   <div className="row g-0">
                     <div className="col-md-5">
                       <img
-                        src={`/img_travelers/${taxCode}.jpg`}
+                        src={`/img_travelers/${taxCode}.png`}
                         className="img-fluid rounded-start img_travel_card"
                         alt="immagine viaggiatore"
                       />
