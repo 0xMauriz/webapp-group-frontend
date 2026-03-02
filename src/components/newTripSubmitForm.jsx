@@ -35,7 +35,7 @@ function NewTripSubmitForm({ onSubmit }) {
       <div className="card m-5">
         <form
           onSubmit={handleSubmit}
-          className="p-5 bg-dark text-light rounded"
+          className="p-5 bg-success text-light rounded text-center"
         >
           <h2>Nuovo Viaggio</h2>
 
