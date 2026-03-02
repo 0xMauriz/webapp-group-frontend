@@ -1,8 +1,15 @@
 function TravelCard(props) {
-  const { tripName, destination, tripDuration, tripStart, tripEnd, image } = props;
+  const { image, tripName, destination, tripDuration, tripStart, tripEnd } = props;
+
   return (
     <div>
       <div className="card" style={{ width: "18rem" }}>
+        <img
+          src={`/public/imgs/` + image}
+          className="card-img-top"
+          alt="Immagine esempio"
+        />
+
         <div className="card-body">
           <h5 className="card-title">{tripName}</h5>
           <p className="card-text">
