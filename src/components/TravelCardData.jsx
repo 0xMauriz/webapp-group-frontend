@@ -17,6 +17,7 @@ function TravelCardData() {
               tripDuration={trip.tripDuration}
               tripStart={trip.tripStart}
               tripEnd={trip.tripEnd}
+              image ={trip.image}
             />
           </Link>
         ))}
