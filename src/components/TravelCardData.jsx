@@ -11,8 +11,8 @@ function TravelCardData() {
     <div className="container text-center ">
       <div className="row justify-content-center gap-5">
         {trips.map((trip) => (
-          <div className="col-md-4">
-            <Link key={trip.id} to={`/travel/${trip.id}`}>
+          <div key={trip.id} className="col-md-4">
+            <Link to={`/travel/${trip.id}`}>
               <TravelCard
                 tripName={trip.tripName}
                 destination={trip.destination}
