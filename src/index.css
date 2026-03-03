@@ -1,9 +1,10 @@
 /* STILE BODY */
 body {
   background: linear-gradient(135deg, #e0f2f1, #ffffff);
-  
+
 
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -19,6 +20,7 @@ body {
   width: 100%;
   max-width: 500px;
 }
+
 .hidden {
   overflow: hidden;
 }
@@ -37,8 +39,15 @@ a {
   text-decoration: none;
 }
 
-.card-img-trip{
+.card-img-trip {
   max-width: 500px;
   height: 300px;
 
+}
+
+
+.travel-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, .18);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
