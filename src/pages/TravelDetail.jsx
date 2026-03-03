@@ -131,8 +131,8 @@ function TravelDetail() {
             ))}
           </ul>
         </div>
-        <div className="container  d-none d-lg-block">
-          <div className="card m-5">
+        <div className="container d-lg-block">
+          <div className="card m-5 p-3 bg-secondary">
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label htmlFor="trip-id" className="form-label">Immettere id del viaggio a cui il viaggiatore è associato: </label>
@@ -170,7 +170,6 @@ function TravelDetail() {
             </form>
           </div>
         </div>
-
       </div>
     </div>
   );
