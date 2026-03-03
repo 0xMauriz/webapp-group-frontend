@@ -131,41 +131,45 @@ function TravelDetail() {
             ))}
           </ul>
         </div>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label htmlFor="trip-id" className="form-label">Immettere id del viaggio a cui il viaggiatore è associato: </label>
-            <input name="trip_id" type="text" className="form-control" id="trip-id" aria-describedby="emailHelp" value={traveler.trip_id} onChange={handleChange} />
+        <div className="container  d-none d-lg-block">
+          <div className="card m-5">
+            <form onSubmit={handleSubmit}>
+              <div className="mb-3">
+                <label htmlFor="trip-id" className="form-label">Immettere id del viaggio a cui il viaggiatore è associato: </label>
+                <input name="trip_id" type="text" className="form-control" id="trip-id" aria-describedby="emailHelp" value={traveler.trip_id} onChange={handleChange} />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="nome-viaggiatore" className="form-label">Immettere nome del viaggiatore: </label>
+                <input name="firstName" type="text" className="form-control" id="traveler-name" value={traveler.firstName} onChange={handleChange} />
+              </div>
+              <div className="mb-3">
+                <label className="form-label" htmlFor="traveler-surname">Immettere cognome del viaggiatore: </label>
+                <input name="lastName" type="text" className="form-control" id="traveler-surname" value={traveler.lastName} onChange={handleChange} />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="tax-code" className="form-label">Immettere codice fiscale del viaggiatore: </label>
+                <input name="taxCode" type="text" className="form-control" id="tax-code" value={traveler.taxCode} onChange={handleChange} />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="traveler-email" className="form-label">Immettere indirizzo Mail: </label>
+                <input name="email" type="email" className="form-control" id="traveler-email" aria-describedby="emailHelp" value={traveler.email} onChange={handleChange} />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="traveler-phone" className="form-label">Immettere numero di telefono del viaggiatore: </label>
+                <input name="phone" type="text" className="form-control" id="traveler-phone" value={traveler.phone} onChange={handleChange} />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="emergency-name" className="form-label">Immettere nome proprietario del numero di telefono di emergenza del viaggiatore: </label>
+                <input name="emergencyName" type="text" className="form-control" id="emergency-name" value={traveler.emergencyContact.name} onChange={handleChange} />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="emergency-number" className="form-label">Immettere numero di telefono del proprietario del numero di telefono di emergenza del viaggiatore: </label>
+                <input name="emergencyPhone" type="text" className="form-control" id="emergency-number" value={traveler.emergencyContact.phone} onChange={handleChange} />
+              </div>
+              <button type="submit" className="btn btn-primary my-3">Submit</button>
+            </form>
           </div>
-          <div className="mb-3">
-            <label htmlFor="nome-viaggiatore" className="form-label">Immettere nome del viaggiatore: </label>
-            <input name="firstName" type="text" className="form-control" id="traveler-name" value={traveler.firstName} onChange={handleChange} />
-          </div>
-          <div className="mb-3">
-            <label className="form-label" htmlFor="traveler-surname">Immettere cognome del viaggiatore: </label>
-            <input name="lastName" type="text" className="form-control" id="traveler-surname" value={traveler.lastName} onChange={handleChange} />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="tax-code" className="form-label">Immettere codice fiscale del viaggiatore: </label>
-            <input name="taxCode" type="text" className="form-control" id="tax-code" value={traveler.taxCode} onChange={handleChange} />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="traveler-email" className="form-label">Immettere indirizzo Mail: </label>
-            <input name="email" type="email" className="form-control" id="traveler-email" aria-describedby="emailHelp" value={traveler.email} onChange={handleChange} />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="traveler-phone" className="form-label">Immettere numero di telefono del viaggiatore: </label>
-            <input name="phone" type="text" className="form-control" id="traveler-phone" value={traveler.phone} onChange={handleChange} />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="emergency-name" className="form-label">Immettere nome proprietario del numero di telefono di emergenza del viaggiatore: </label>
-            <input name="emergencyName" type="text" className="form-control" id="emergency-name" value={traveler.emergencyContact.name} onChange={handleChange} />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="emergency-number" className="form-label">Immettere numero di telefono del proprietario del numero di telefono di emergenza del viaggiatore: </label>
-            <input name="emergencyPhone" type="text" className="form-control" id="emergency-number" value={traveler.emergencyContact.phone} onChange={handleChange} />
-          </div>
-          <button type="submit" className="btn btn-primary my-3">Submit</button>
-        </form>
+        </div>
 
       </div>
     </div>
