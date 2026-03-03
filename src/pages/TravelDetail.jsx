@@ -3,16 +3,73 @@ import { useState } from "react";
 
 import TravelerCards from "../components/TravelerCards";
 import SearchBar from "../components/SearchBar";
-import NewTravelerForm from "../components/NewTravelerForm.jsx";
 
 //importo dati
 import arrayViaggi from "./../data/tripData";
 
 function TravelDetail() {
+
+  // Logica per permettere l'aggiunta di nuovi viaggiatori nell'array e il rendering in pagina
+
+  const [travelersList, setTravelersList] = useState(arrayViaggi);
+
+  const [traveler, setTraveler] = useState({
+    trip_id: "",
+    travelerName: "",
+    travelerSurname: "",
+    taxCode: "",
+    email: "",
+    phone: ""
+
+  });
+
+  function handleChange(e) {
+
+    const { name, value } = e.target;
+
+    setTraveler(travelerTemp => ({
+      ...travelerTemp,
+      [name]: value
+    }))
+
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    setTravelersList(prevList =>
+      prevList.map(travel =>
+        travel.id == travel_id
+          ? {
+            ...travel,
+            travelerData: [...travel.travelerData, traveler]
+          }
+          : travel
+      )
+    );
+
+    setTraveler({
+      trip_id: "",
+      firstName: "",
+      lastName: "",
+      taxCode: "",
+      email: "",
+      phone: ""
+    });
+  }
+
+
+  console.log(travelersList);
+
+
+
+
   //recuper id del viaggio da url
+
+
   const { travel_id } = useParams();
 
-  const travel = arrayViaggi.find((travel) => travel.id == travel_id);
+  const travel = travelersList.find((travel) => travel.id == travel_id);
   const travelers = travel.travelerData;
 
   const [searchTraveler, setSearchTraveler] = useState("");
@@ -58,6 +115,34 @@ function TravelDetail() {
             ))}
           </ul>
         </div>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label htmlFor="trip-id" className="form-label">Immettere id del viaggio a cui il viaggiatore è associato: </label>
+            <input name="trip_id" type="text" className="form-control" id="trip-id" aria-describedby="emailHelp" value={traveler.trip_id} onChange={handleChange} />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="nome-viaggiatore" className="form-label">Immettere nome del viaggiatore: </label>
+            <input name="firstName" type="text" className="form-control" id="traveler-name" value={traveler.firstName} onChange={handleChange} />
+          </div>
+          <div className="mb-3">
+            <label className="form-label" htmlFor="traveler-surname">Immettere cognome del viaggiatore: </label>
+            <input name="lastName" type="text" className="form-control" id="traveler-surname" value={traveler.lastName} onChange={handleChange} />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="tax-code" className="form-label">Immettere codice fiscale del viaggiatore: </label>
+            <input name="taxCode" type="text" className="form-control" id="tax-code" aria-describedby="emailHelp" value={traveler.taxCode} onChange={handleChange} />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="traveler-email" className="form-label">Immettere indirizzo Mail: </label>
+            <input name="email" type="email" className="form-control" id="traveler-email" aria-describedby="emailHelp" value={traveler.email} onChange={handleChange} />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="traveler-phone" className="form-label">Immettere numero di telefono del viaggiatore: </label>
+            <input name="phone" type="text" className="form-control" id="traveler-phone" aria-describedby="emailHelp" value={traveler.phone} onChange={handleChange} />
+          </div>
+          <button type="submit" className="btn btn-primary my-3">Submit</button>
+        </form>
+
       </div>
     </div>
   );
