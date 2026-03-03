@@ -19,24 +19,59 @@ function TravelDetail() {
     travelerSurname: "",
     taxCode: "",
     email: "",
-    phone: ""
+    phone: "",
+    emergencyContact: {
+      name: "",
+      phone: ""
+    }
 
   });
 
   function handleChange(e) {
-
     const { name, value } = e.target;
 
-    setTraveler(travelerTemp => ({
-      ...travelerTemp,
-      [name]: value
-    }))
-
+    if (name === "emergencyName" || name === "emergencyPhone") {
+      setTraveler(prev => ({
+        ...prev,
+        emergencyContact: {
+          ...prev.emergencyContact,
+          [name === "emergencyName" ? "name" : "phone"]: value
+        }
+      }));
+    } else {
+      setTraveler(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    }
   }
 
   function handleSubmit(e) {
     e.preventDefault();
 
+    setTravelersList(prevList =>
+      prevList.map(travel =>
+        travel.id == travel_id
+          ? {
+            ...travel,
+            travelerData: [...travel.travelerData, traveler]
+          }
+          : travel
+      )
+    );
+
+    setTraveler({
+      trip_id: "",
+      firstName: "",
+      lastName: "",
+      taxCode: "",
+      email: "",
+      phone: "",
+      emergencyContact: {
+        name: "",
+        phone: ""
+      }
+    });
   }
 
 
@@ -111,7 +146,7 @@ function TravelDetail() {
           </div>
           <div className="mb-3">
             <label htmlFor="tax-code" className="form-label">Immettere codice fiscale del viaggiatore: </label>
-            <input name="taxCode" type="text" className="form-control" id="tax-code" aria-describedby="emailHelp" value={traveler.taxCode} onChange={handleChange} />
+            <input name="taxCode" type="text" className="form-control" id="tax-code" value={traveler.taxCode} onChange={handleChange} />
           </div>
           <div className="mb-3">
             <label htmlFor="traveler-email" className="form-label">Immettere indirizzo Mail: </label>
@@ -119,15 +154,15 @@ function TravelDetail() {
           </div>
           <div className="mb-3">
             <label htmlFor="traveler-phone" className="form-label">Immettere numero di telefono del viaggiatore: </label>
-            <input name="phone" type="text" className="form-control" id="traveler-phone" aria-describedby="emailHelp" value={traveler.phone} onChange={handleChange} />
+            <input name="phone" type="text" className="form-control" id="traveler-phone" value={traveler.phone} onChange={handleChange} />
           </div>
           <div className="mb-3">
-            <label htmlFor="traveler-phone" className="form-label">Immettere numero di telefono del viaggiatore: </label>
-            <input name="phone" type="text" className="form-control" id="traveler-phone" aria-describedby="emailHelp" value={traveler.phone} onChange={handleChange} />
+            <label htmlFor="emergency-name" className="form-label">Immettere nome proprietario del numero di telefono di emergenza del viaggiatore: </label>
+            <input name="emergencyName" type="text" className="form-control" id="emergency-name" value={traveler.emergencyContact.name} onChange={handleChange} />
           </div>
           <div className="mb-3">
-            <label htmlFor="traveler-phone" className="form-label">Immettere numero di telefono del viaggiatore: </label>
-            <input name="phone" type="text" className="form-control" id="traveler-phone" aria-describedby="emailHelp" value={traveler.phone} onChange={handleChange} />
+            <label htmlFor="emergency-number" className="form-label">Immettere numero di telefono del proprietario del numero di telefono di emergenza del viaggiatore: </label>
+            <input name="emergencyPhone" type="text" className="form-control" id="emergency-number" value={traveler.emergencyContact.phone} onChange={handleChange} />
           </div>
           <button type="submit" className="btn btn-primary my-3">Submit</button>
         </form>
