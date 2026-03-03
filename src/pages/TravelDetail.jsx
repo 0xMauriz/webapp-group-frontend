@@ -37,25 +37,6 @@ function TravelDetail() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    setTravelersList(prevList =>
-      prevList.map(travel =>
-        travel.id == travel_id
-          ? {
-            ...travel,
-            travelerData: [...travel.travelerData, traveler]
-          }
-          : travel
-      )
-    );
-
-    setTraveler({
-      trip_id: "",
-      firstName: "",
-      lastName: "",
-      taxCode: "",
-      email: "",
-      phone: ""
-    });
   }
 
 
@@ -135,6 +116,14 @@ function TravelDetail() {
           <div className="mb-3">
             <label htmlFor="traveler-email" className="form-label">Immettere indirizzo Mail: </label>
             <input name="email" type="email" className="form-control" id="traveler-email" aria-describedby="emailHelp" value={traveler.email} onChange={handleChange} />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="traveler-phone" className="form-label">Immettere numero di telefono del viaggiatore: </label>
+            <input name="phone" type="text" className="form-control" id="traveler-phone" aria-describedby="emailHelp" value={traveler.phone} onChange={handleChange} />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="traveler-phone" className="form-label">Immettere numero di telefono del viaggiatore: </label>
+            <input name="phone" type="text" className="form-control" id="traveler-phone" aria-describedby="emailHelp" value={traveler.phone} onChange={handleChange} />
           </div>
           <div className="mb-3">
             <label htmlFor="traveler-phone" className="form-label">Immettere numero di telefono del viaggiatore: </label>
