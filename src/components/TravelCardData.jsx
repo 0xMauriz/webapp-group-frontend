@@ -4,6 +4,7 @@ import arrayViaggi from "../../src/data/tripData.js";
 import TravelCard from "./TravelCard.jsx";
 
 function TravelCardData() {
+
   const [trips, setTrips] = useState(arrayViaggi);
 
   return (

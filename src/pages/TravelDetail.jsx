@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import TravelerCards from "../components/TravelerCards";
 import SearchBar from "../components/SearchBar";
+import NewTravelerForm from "../components/NewTravelerForm.jsx";
 
 //importo dati
 import arrayViaggi from "./../data/tripData";
@@ -50,7 +51,7 @@ function TravelDetail() {
             </button>
           </Link>
           <h1>Viaggiatori:</h1>
-          <SearchBar search={searchTraveler} setSearch={setSearchTraveler}  className/>
+          <SearchBar search={searchTraveler} setSearch={setSearchTraveler} className />
           <ul className="list-group list-group-flush">
             {searched_travelers.map((traveler) => (
               <TravelerCards key={traveler.id} traveler={traveler} />
